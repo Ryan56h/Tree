@@ -1,0 +1,79 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #001f3f; /* Màu nền đêm Noel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Container chính */
+.container {
+    position: relative;
+    text-align: center;
+}
+
+/* Ngôi sao trên đỉnh cây */
+.star {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 30px;
+    height: 30px;
+    
+    background: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: twinkle 1s infinite alternate;
+}
+
+/* Hiệu ứng nhấp nháy */
+@keyframes twinkle {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* Các tầng của cây thông */
+.layer {
+    position: relative;
+    margin: 0 auto;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    background: transparent;
+}
+
+.layer1 {
+    border-bottom: 100px solid #2e8b57;
+}
+
+.layer2 {
+    border-bottom: 130px solid #228b22;
+    margin-top: -40px;
+}
+
+.layer3 {
+    border-bottom: 160px solid #006400;
+    margin-top: -60px;
+}
+
+.layer4 {
+    border-bottom: 190px solid #004d00;
+    margin-top: -80px;
+}
+
+/* Thân cây */
+.trunk {
+    width: 40px;
+    height: 60px;
+    background: #8b4513;
+    margin: -30px auto 0;
+    border-radius: 5px;
+}
+
